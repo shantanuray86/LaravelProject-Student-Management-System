@@ -20,7 +20,9 @@ Route::get('/', function () {
 
 //Auth::routes();
 
+// This is the user dashboard common to all teacher,student etc.
 Route::get('/home', 'HomeController@index')->name('home');
+// User Logout Function
 Route::post('/logout', 'Auth\LoginController@userLogout')->name('logout');
 
 /**
