@@ -16,8 +16,7 @@
 
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header" style="font-size: 20px"><b>Class List</b>
-                || <a href="{{ url('/admin/class/add') }}">Add Class</a>
+                <div class="card-header" style="font-size: 20px"><b>Teacher Class List</b>
             </div>
 
                 <div class="card-body">
@@ -34,7 +33,7 @@
                             <th scope="col">Teacher Name</th>
                             <th scope="col">Subject Name</th>
                             <th scope="col">Class Name</th>
-                            <th scope="col">Action</th>
+                            <!-- <th scope="col">Action</th> -->
                         </tr>
                         </thead>
                         <tbody>
@@ -56,7 +55,7 @@
                             @endforeach
                             </ul>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <a href="{{ url('admin/class/edit',$data->id) }}">Edit</a> ||
                                 <form id="delete-form-{{ $data->id }}" method="post" action="{{ url('admin/class/delete', $data->id) }}" style="display: none">
                                     {{csrf_field()}}
@@ -73,7 +72,7 @@
                                         event.preventDefault();
                                         }">Delete
                                 </a>
-                            </td>
+                            </td> -->
                         </tr>
                             @endforeach
                         </tbody>

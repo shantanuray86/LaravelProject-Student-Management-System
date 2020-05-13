@@ -19,7 +19,7 @@ class ClassController extends Controller
     	$classlist = Classes::all();
     	//$classlist = DB::table('classes')->get();
     	//print_r($classlist);
-    	return view('admin.classList',compact('classlist'));
+    	return view('admin.class.index',compact('classlist'));
     }
 
     // Save the Class

@@ -6,10 +6,16 @@
                 <a href="{{url('/admin/departmentlist')}}">Departments</a>   
            </div>
            <div class="card-body">
-                <a href="{{url('/admin/classmanagementlist')}}">Class</a>   
+                <a href="{{url('/admin/classlist')}}">Class</a>   
            </div>
            <div class="card-body">
                 <a href="{{url('/admin/studentlist')}}">Students</a>   
+           </div>
+           <div class="card-body">
+                <a href="{{url('/admin/teacherlist')}}">Teachers</a>   
+           </div>
+           <div class="card-body">
+                <a href="{{url('/admin/classmanagementlist')}}">Teacher Class Management</a>   
            </div>
            <div class="card-body">
                 <a href="#">Staffs</a>   

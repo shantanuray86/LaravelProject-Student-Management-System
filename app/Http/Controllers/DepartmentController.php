@@ -15,7 +15,7 @@ class DepartmentController extends Controller
     public function index()
     {
     	$departmentList = Department::all();
-    	return view('admin.departmentList',compact('departmentList'));
+    	return view('admin.department.index',compact('departmentList'));
     }
     // Add Department Form
     public function create()

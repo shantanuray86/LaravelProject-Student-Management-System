@@ -28,10 +28,10 @@ Route::post('/logout', 'Auth\LoginController@userLogout')->name('logout');
   Since Teacher, 
 * Student and in future staffs could be added from respective add portal inside admin   
 * portal. 
-**/
+*/
 Auth::routes(['register' => false,'login'=>true]);
 
-//Admin Login Routes
+//Admin Login, Logout, Dashbaord Routes
 Route::get('/admin/loginform', 'Admin\AdminloginController@showloginform')->name('admin.login');
 Route::post('/admin/logout', 'Admin\AdminLoginController@adminLogout')->name('admin.logout');
 
@@ -49,9 +49,9 @@ Route::get('/admin/classlist', 'ClassController@index')->name('classlist');
 /**
 * Since this route does not have a controller, the protected guard 'auth:admin' is 
 * applied directly to the route instead of writing it in the controller.
-**/
+*/
 Route::get('/admin/class/add', function(){
-	return view('admin.addClass');
+	return view('admin.class.create');
 })->middleware('auth:admin');
 Route::post('/admin/class/save', 'ClassController@save')->name('classsave');
 Route::get('/admin/class/edit/{id}', 'ClassController@edit')->name('classedit');
@@ -93,7 +93,7 @@ Route::get('/admin/classmanagementlist', 'ClassManagementController@index')->nam
 
 /**
 * User Routes 
-**/
+*/
 
 Route::get('/teacher/dashboard', 'Users\TeacherController@index')->name('teacherdashboard');
 
